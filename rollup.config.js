@@ -4,6 +4,8 @@ import serve from 'rollup-plugin-serve'
 import livereload from 'rollup-plugin-livereload';
 import commonjs from '@rollup/plugin-commonjs'
 import resolve from '@rollup/plugin-node-resolve';
+import eslint from '@rollup/plugin-eslint';
+import typescript from '@rollup/plugin-typescript';
 
 export default {
   input: 'src/main.js',
@@ -23,6 +25,8 @@ export default {
     livereload({
       wait: 'dist',
     }),
+    eslint(),
+    typescript(),
     serve({
       open: true,
       host: 'localhost',

@@ -1,3 +1,2 @@
-import { fromEvent } from 'rxjs'
-
-fromEvent(document, 'click').subscribe(() => console.log('Clicked!'));
+import './demo1';
+import './demo2';
